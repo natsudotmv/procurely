@@ -8,6 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "company-service", "company-service", "{F5879C24-0B34-4B10-9095-0D7CDCEA80F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1F4F2915-7ADA-4EAB-8A6F-CC202B35758F}"
+	ProjectSection(SolutionItems) = preProject
+		services\company-service\src\Dockerfile = services\company-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Api", "services\company-service\src\Company.Api\Company.Api.csproj", "{A88BC92B-DCA6-46EF-99F3-BAF10C1303C7}"
 EndProject
@@ -18,6 +22,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "analytics-service", "analytics-service", "{EA1E9D7D-7DB9-4709-8D4F-9E1B3CF962EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{42C87421-99D1-4E24-8B27-4AEED28C3EF6}"
+	ProjectSection(SolutionItems) = preProject
+		services\analytics-service\src\Dockerfile = services\analytics-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analytics.Api", "services\analytics-service\src\Analytics.Api\Analytics.Api.csproj", "{A588B88B-E610-4370-885B-B7110D60CC06}"
 EndProject
@@ -28,6 +36,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth-service", "auth-service", "{03194118-1E99-4B7B-ABAD-B3FCD5459AFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C55EEB2A-98CD-49C1-BA7F-DF77A405A6D3}"
+	ProjectSection(SolutionItems) = preProject
+		services\auth-service\src\Dockerfile = services\auth-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Api", "services\auth-service\src\Auth.Api\Auth.Api.csproj", "{F5298826-BE29-4BEC-9C3E-B4EA6582F53D}"
 EndProject
@@ -38,6 +50,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notification-service", "notification-service", "{20A9A369-B8B7-4476-A91B-B665002DC84C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82F2E12E-EE97-4A96-A700-67A69A65353F}"
+	ProjectSection(SolutionItems) = preProject
+		services\notification-service\src\Dockerfile = services\notification-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification.Api", "services\notification-service\src\Notification.Api\Notification.Api.csproj", "{379A2C71-8383-4D3D-8B2B-9F9BD740EA8D}"
 EndProject
@@ -48,6 +64,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "order-service", "order-service", "{C3AAA6DC-C3FA-4C90-8770-9F2341978A52}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19E2DBF3-8975-482E-B6EF-7C228A7BADA6}"
+	ProjectSection(SolutionItems) = preProject
+		services\order-service\src\Dockerfile = services\order-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Api", "services\order-service\src\Order.Api\Order.Api.csproj", "{F0205004-53CE-4C49-B954-9CDF5116BEA9}"
 EndProject
@@ -58,18 +78,30 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pricing-engine-service", "pricing-engine-service", "{906A7103-FCEC-450F-889F-1E646B1B9175}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{69FBE524-C262-4352-B23B-CC46F9CBBD30}"
+	ProjectSection(SolutionItems) = preProject
+		services\pricing-engine-service\src\Dockerfile = services\pricing-engine-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pricing.Infrastructure", "services\pricing-engine-service\src\Pricing.Infrastructure\Pricing.Infrastructure.csproj", "{557171DD-D956-4992-8E34-02F5AF76AF10}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rfq-service", "rfq-service", "{E51AB8F8-041D-4A41-B1BC-F3FA0E3E9D92}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10C47A25-B49E-4869-9FDD-4B6C544E4456}"
+	ProjectSection(SolutionItems) = preProject
+		services\rfq-service\src\Dockerfile = services\rfq-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFQ.Infrastructure", "services\rfq-service\src\RFQ.Infrastructure\RFQ.Infrastructure.csproj", "{2B422D86-1080-48CF-B944-1525428587C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vendor-service", "vendor-service", "{E5BAB428-D75B-4358-BD30-09768C961F33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9F2F9094-DD8D-40F0-8B90-EBFDA009D80A}"
+	ProjectSection(SolutionItems) = preProject
+		services\vendor-service\src\Dockerfile = services\vendor-service\src\Dockerfile
+		services\company-service\src\.dockerignore = services\company-service\src\.dockerignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quote.Infrastructure", "services\vendor-service\src\Quote.Infrastructure\Quote.Infrastructure.csproj", "{CC71B930-FD18-4A6F-AF3F-16A196BED810}"
 EndProject
