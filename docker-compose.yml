@@ -1,5 +1,5 @@
 services:
-  procurely-analytics-api:
+  analytics-api:
     build: 
       context: ./services/analytics-service/src
       dockerfile: Dockerfile
@@ -8,7 +8,18 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-auth-api:
+  analytics-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: analyticsdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - analytics-data:/var/lib/postgresql/data
+
+  auth-api:
     build: 
       context: ./services/auth-service/src
       dockerfile: Dockerfile
@@ -17,7 +28,7 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-company-api:
+  company-api:
     build: 
       context: ./services/company-service/src
       dockerfile: Dockerfile
@@ -26,7 +37,7 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-notification-api:
+  notification-api:
     build: 
       context: ./services/notification-service/src
       dockerfile: Dockerfile
@@ -35,7 +46,7 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-order-api:
+  order-api:
     build: 
       context: ./services/order-service/src
       dockerfile: Dockerfile
@@ -44,7 +55,7 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-pricing-api:
+  pricing-api:
     build: 
       context: ./services/pricing-engine-service/src
       dockerfile: Dockerfile
@@ -53,7 +64,7 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-quote-api:
+  quote-api:
     build: 
       context: ./services/quote-service/src
       dockerfile: Dockerfile
@@ -62,7 +73,7 @@ services:
     environment:
     - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-rfq-api:
+  rfq-api:
     build: 
       context: ./services/rfq-service/src
       dockerfile: Dockerfile
@@ -71,7 +82,7 @@ services:
     environment:
     - DOTNETCORE_ENVIRONMENT=Development
 
-  procurely-vendor-api:
+  vendor-api:
     build: 
       context: ./services/vendor-service/src
       dockerfile: Dockerfile
@@ -79,3 +90,6 @@ services:
         - "5009:8080"
     environment:
     - DOTNETCORE_ENVIRONMENT=Development
+
+volumes:
+  analytics-data:
