@@ -28,6 +28,17 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
+  auth-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: authdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - auth-data:/var/lib/postgresql/data
+
   company-api:
     build: 
       context: ./services/company-service/src
@@ -93,3 +104,4 @@ services:
 
 volumes:
   analytics-data:
+  auth-data:
