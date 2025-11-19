@@ -4,11 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Quote.Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Quote.Core\Quote.Core.csproj" />
-    <ProjectReference Include="..\Quote.Infrastructure\Quote.Infrastructure.csproj" />
+    <ProjectReference Include="..\Vendor.Core\Vendor.Core.csproj" />
+    <ProjectReference Include="..\Vendor.Infrastructure\Vendor.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

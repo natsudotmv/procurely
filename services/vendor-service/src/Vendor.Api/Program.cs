@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Quote.Infrastructure.Data;
+using Vendor.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("QuoteDatabase")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("VendorDatabase")));
 
 
 var app = builder.Build();
