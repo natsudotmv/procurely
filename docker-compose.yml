@@ -68,6 +68,17 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
+  notification-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: notificationsdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - notification-data:/var/lib/postgresql/data
+
   order-api:
     build: 
       context: ./services/order-service/src
@@ -76,6 +87,17 @@ services:
         - "5005:8080"
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
+
+  order-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: orderdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - order-data:/var/lib/postgresql/data
 
   pricing-api:
     build: 
@@ -86,6 +108,17 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
+  pricing-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pricingdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pricing-data:/var/lib/postgresql/data
+
   quote-api:
     build: 
       context: ./services/quote-service/src
@@ -94,6 +127,17 @@ services:
         - "5007:8080"
     environment:
     - DOTNETCORE_ENVIRONMENT=Development
+
+  quote-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: quotedb
+    ports:
+      - "5432:5432"
+    volumes:
+      - quote-data:/var/lib/postgresql/data
 
   rfq-api:
     build: 
@@ -104,6 +148,17 @@ services:
     environment:
     - DOTNETCORE_ENVIRONMENT=Development
 
+  rfq-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: rfqdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - rfq-data:/var/lib/postgresql/data
+
   vendor-api:
     build: 
       context: ./services/vendor-service/src
@@ -113,7 +168,24 @@ services:
     environment:
     - DOTNETCORE_ENVIRONMENT=Development
 
+  vendor-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: vendordb
+    ports:
+      - "5432:5432"
+    volumes:
+      - vendor-data:/var/lib/postgresql/data
+
 volumes:
   analytics-data:
   auth-data:
   company-data:
+  notification-data:
+  order-data:
+  pricing-data:
+  quote-data:
+  rfq-data:
+  vendor-data:
