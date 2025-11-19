@@ -11,4 +11,10 @@
     <ProjectReference Include="..\Company.Infrastructure\Company.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.414" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.414" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.414" />
+  </ItemGroup>
+
 </Project>

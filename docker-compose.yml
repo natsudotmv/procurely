@@ -48,6 +48,17 @@ services:
     environment:
       - DOTNETCORE_ENVIRONMENT=Development
 
+  company-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: comanydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - company-data:/var/lib/postgresql/data
+
   notification-api:
     build: 
       context: ./services/notification-service/src
@@ -105,3 +116,4 @@ services:
 volumes:
   analytics-data:
   auth-data:
+  company-data:
